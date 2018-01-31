@@ -1,6 +1,7 @@
 import {assert, expect} from 'chai';
 
 import fizzbuzz from '../src/fizzbuzz';
+import bubbleSort from '../src/bubblesort';
 
 describe('Algorithms tests', () => {
   
@@ -27,6 +28,16 @@ describe('Algorithms tests', () => {
 
     it('should work for negative numbers', () => {
       expect(fizzbuzz([-15, -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0])).to.eql(["fizzbuzz", "buzz", "fizz", -8, -7, "fizz", "buzz", -4, "fizz", -2, -1, 0]);
+    });
+  });
+
+  describe('Bubble Sort', () => {
+    it('should return sorted list of numbers', () => {
+      expect(bubbleSort([6,5,3,1,8,7,2,4])).to.eql([1, 2, 3, 4, 5, 6, 7, 8]);
+    });
+
+    it('should return empty array if empty array is passed', () => {
+      expect(bubbleSort([])).to.eql([]);
     });
   });
 
