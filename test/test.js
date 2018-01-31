@@ -39,6 +39,12 @@ describe('Algorithms tests', () => {
     it('should return empty array if empty array is passed', () => {
       expect(bubbleSort([])).to.eql([]);
     });
+
+    it('should sort in place', () => {
+      let array = [3, 2, 1];
+      bubbleSort(array);
+      expect(array).to.not.eql([3, 2, 1]);
+    });
   });
 
 });
