@@ -1,0 +1,34 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Algorithms tutorial project using node.js, express, mocha and chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iiiked/algorithms.git"
+  },
+  "keywords": [
+    "algorithms",
+    "node",
+    "express",
+    "mocha",
+    "chai"
+  ],
+  "author": "iiiked",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iiiked/algorithms/issues"
+  },
+  "homepage": "https://github.com/iiiked/algorithms#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.16.0",
+    "mocha": "^5.0.0"
+  }
+}
