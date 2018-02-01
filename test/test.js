@@ -2,6 +2,7 @@ import {assert, expect} from 'chai';
 
 import fizzbuzz from '../src/fizzbuzz';
 import bubbleSort from '../src/bubblesort';
+import graphEdgesToMatrix from '../src/adjacencymatrix';
 
 describe('Algorithms tests', () => {
   
@@ -45,6 +46,16 @@ describe('Algorithms tests', () => {
       bubbleSort(array);
       expect(array).to.not.eql([3, 2, 1]);
     });
+  });
+
+  describe('Graph Adjacency Matrix converter', () => {
+    it('should return adjacency martix from array of edges', () => {
+      expect(graphEdgesToMatrix([[1, 1], [3, 4], [2, 3], [1, 4], [2, 4], [1, 2]])).to.eql([[1, 1, 0, 1], [0, 0, 1, 1], [0, 0, 0, 1], [0, 0, 0, 0]]);
+    });
+
+    it('should return empty array if empty array is passed', () => {
+      expect(graphEdgesToMatrix([])).to.eql([]);
+    })
   });
 
 });
