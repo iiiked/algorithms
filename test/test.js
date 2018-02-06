@@ -3,6 +3,7 @@ import {assert, expect} from 'chai';
 import fizzbuzz from '../src/fizzbuzz';
 import bubbleSort from '../src/bubblesort';
 import graphEdgesToMatrix from '../src/adjacencymatrix';
+import findPeak from '../src/findpeak';
 
 describe('Algorithms tests', () => {
   
@@ -56,6 +57,12 @@ describe('Algorithms tests', () => {
     it('should return empty array if empty array is passed', () => {
       expect(graphEdgesToMatrix([])).to.eql([]);
     })
+  });
+
+  describe('One dimensional find peak algorithm', () => {
+    it('should return a peak from array of numbers', () => {
+      expect(findPeak([1, 2, 3, 4, 5])).to.equal(5);
+    });
   });
 
 });
